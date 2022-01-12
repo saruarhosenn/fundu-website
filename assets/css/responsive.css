@@ -1,0 +1,515 @@
+/*
+=========================================
+Responsive Breakpoint
+=========================================
+*/
+@media (max-width: 1399px) {
+
+	/* 
+	===============================
+	Back to top Btn
+	===============================
+	*/
+	#scroll-up-btn {
+		width: 40px;
+		height: 40px;
+	}
+
+}
+
+@media (max-width: 1199px) {
+
+	:root {
+		--size-xl: 220px;
+		--size-lg: 60px;
+	}
+
+	/* 
+	===============================
+	 Header Section Responsive
+	===============================
+	*/
+	nav .main-menu ul li:not(:last-child) {
+		margin-right: 25px;
+	}
+
+
+	/* 
+	===============================
+	 Hero Section Responsive
+	===============================
+	*/
+	.hero-text h1 {
+		font-size: 64px;
+	}
+
+	.hero-img img {
+		margin-left: 60px;
+	}
+
+	/* 
+	===============================
+	 About Section Responsive
+	===============================
+	*/
+	.about-img img {
+		margin-left: 0px;
+	}
+
+	.about-text h3 {
+		font-size: 45px;
+	}
+
+	/* 
+	===============================
+	 Events Section Responsive
+	===============================
+	*/
+	.events-main-text {
+		padding-left: 0px !important;
+	}
+
+	.events-main-text h3 {
+		font-size: 26px;
+	}
+
+
+	/* 
+	===============================
+	 Sermons Section Responsive
+	===============================
+	*/
+	.sermons-text {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	.sermons-text h3 {
+		font-size: 19px;
+	}
+
+	/* 
+	===============================
+	 Contact Section Responsive
+	===============================
+	*/
+	.country-select {
+		background-position: right 92px center;
+	}
+
+	.state-select {
+		background-position: right 112px center;
+	}
+
+	/* 
+	===============================
+	 News Section Responsive
+	===============================
+	*/
+	.news-text h4 {
+		font-size: 17px;
+	}
+
+	/* 
+	===============================
+	 Footer Section Responsive
+	===============================
+	*/
+	.recent-sermons-text p {
+		font-size: 16px;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	:root {
+		--size-xl: 200px;
+		--size-lg: 55px;
+	}
+
+	/* 
+	===============================
+	 Column Margin Bottom
+	===============================
+	*/
+	.md-col-mb-30 {
+		margin-bottom: 30px;
+	}
+
+	/* 
+	===============================
+	 Header Section Responsive
+	===============================
+	*/
+	.nav-container {
+		padding: 15px 0;
+	}
+
+	nav .main-menu {
+		position: fixed;
+		right: -100%;
+		top: 0;
+		height: 100vh;
+		background: var(--white-color);
+		width: 50%;
+		-webkit-transition: all 0.6s ease-in;
+		-o-transition: all 0.6s ease-in;
+		transition: all 0.6s ease-in;
+		z-index: 9999;
+	}
+
+	nav .main-menu ul li:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.active-main-menu {
+		right: 0 !important;
+		-webkit-transition: all 0.6s ease-in;
+		-o-transition: all 0.6s ease-in;
+		transition: all 0.6s ease-in;
+	}
+
+	/* 
+	===============================
+	 Hero Section Responsive
+	===============================
+	*/
+	.hero-text h1 {
+		font-size: 47px;
+	}
+
+	/* 
+	===============================
+	 About Section Responsive
+	===============================
+	*/
+	.about-text h3 {
+		font-size: 35px;
+	}
+
+
+	/* 
+	===============================
+	 Events Section Responsive
+	===============================
+	*/
+	.events-row {
+		padding: 30px;
+	}
+
+	.events-main-text {
+		padding-right: 0;
+	}
+
+	/* 
+	===============================
+	 Contact Section Responsive
+	===============================
+	*/
+	.country-select,
+	.state-select {
+		background-position: right 35px center;
+	}
+
+	/* 
+	===============================
+	 Features Section Responsive
+	===============================
+	*/
+	.features .features-text h3 {
+		font-size: 22px;
+	}
+
+	/* 
+	===============================
+	 Slider Section Responsive
+	===============================
+	*/
+	.slider-content h3 {
+		margin-top: 200px !important;
+	}
+
+	.slider-content p {
+		font-size: 20px;
+	}
+
+	.swiper-pagination-button {
+		top: 55%;
+	}
+
+
+	/* 
+	===============================
+	Back to top Btn
+	===============================
+	*/
+	#scroll-up-btn {
+		width: 35px;
+		height: 35px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	:root {
+		--size-xl: 130px;
+		--size-lg: 45px;
+	}
+
+	/* 
+	===============================
+	 Column Margin Bottom
+	===============================
+	*/
+	.sm-col-mb-30 {
+		margin-bottom: 30px;
+	}
+
+	/* 
+	===============================
+	 Header Section Responsive
+	===============================
+	*/
+	nav .main-menu {
+		width: 60%;
+	}
+
+	/* 
+	===============================
+	 Hero Section Responsive
+	===============================
+	*/
+	.hero-section {
+		padding-bottom: 130px;
+	}
+
+	.hero-img img {
+		margin-left: 0px;
+	}
+
+	/* 
+	===============================
+	 Contact Section Responsive
+	===============================
+	*/
+	.form-field :is(input, select) {
+		padding: 20px;
+	}
+
+	.select-item-form,
+	.country-select,
+	.state-select {
+		background-position: right 20px center;
+	}
+
+	/* 
+	===============================
+	 Features Section Responsive
+	===============================
+	*/
+	.features-img {
+		margin-right: 0;
+	}
+
+	/* 
+	===============================
+	 Counter Section Responsive
+	===============================
+	*/
+	.vertical-line:nth-child(2):after {
+		background-color: transparent;
+	}
+
+	/* 
+	===============================
+	 Slider Section Responsive
+	===============================
+	*/
+	.slider-content h3 {
+		margin-top: 170px !important;
+	}
+
+	.swiper-pagination-button {
+		top: 55%;
+	}
+
+}
+
+@media (max-width: 575px) {
+
+	/* 
+	===============================
+	 Header Section Responsive
+	===============================
+	*/
+	nav .main-menu {
+		width: 80%;
+	}
+}
+
+@media (max-width: 540px) {
+	:root {
+		--size-xl: 100px;
+		--size-lg: 40px;
+	}
+}
+
+@media (max-width: 500px) {
+
+	/* 
+	===============================
+	 Slider Section Responsive
+	===============================
+	*/
+	.slider-content {
+		padding-top: 120px;
+	}
+
+	.slider-content img {
+		top: 30px;
+	}
+
+	.slider-content h3 {
+		margin-top: 170px !important;
+	}
+
+	.swiper-pagination-button {
+		top: 55%;
+	}
+
+}
+
+@media (max-width: 451px) {
+	.events-main-text h3 {
+		font-size: 23px;
+	}
+}
+
+@media (max-width: 441px) {
+	:root {
+		--size-xl: 90px;
+		--size-lg: 35px;
+	}
+
+	.news-text {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 430px) {
+
+	/* 
+	===============================
+	 Hero Section Responsive
+	===============================
+	*/
+	.hero-text h1 {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 409px) {
+
+	/* 
+	===============================
+	 Events Section Responsive
+	===============================
+	*/
+	.events-row {
+		padding: 10px;
+	}
+
+	.events-main-text h3 {
+		font-size: 22px;
+	}
+
+	/* 
+	===============================
+	 Slider Section Responsive
+	===============================
+	*/
+	.slider-content {
+		padding-top: 90px;
+	}
+
+	.slider-content img {
+		top: 15px;
+	}
+
+	.slider-content h3 {
+		margin-top: 150px !important;
+	}
+
+	.swiper-pagination-button {
+		top: 55%;
+	}
+
+	.slider-content p {
+		font-size: 18px;
+	}
+
+}
+
+@media (max-width: 390px) {
+	:root {
+		--size-lg: 32px;
+	}
+
+	/* 
+	===============================
+	 About Section Responsive
+	===============================
+	*/
+	.about-text h3 {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 380px) {
+	:root {
+		--size-xl: 85px;
+		--size-lg: 30px;
+	}
+}
+
+@media (max-width: 353px) {
+	:root {
+		--size-xl: 75px;
+		--size-lg: 28px;
+	}
+
+	/* 
+	===============================
+	 About Section Responsive
+	===============================
+	*/
+	.about-text h3 {
+		font-size: 27px;
+	}
+}
+
+@media (max-width: 346px) {
+
+	/* 
+	===============================
+	 Header Section Responsive
+	===============================
+	*/
+	header .header-top-content .social-link li a {
+		font-size: 15px;
+	}
+
+	header .header-top-content .signin-signup li :is(span, a) {
+		font-size: 13px;
+	}
+
+	/* 
+	===============================
+	 Hero Section Responsive
+	===============================
+	*/
+	.hero-text h1 {
+		font-size: 34px;
+	}
+}

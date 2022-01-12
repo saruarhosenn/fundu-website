@@ -1,0 +1,1024 @@
+@charset "UTF-8";
+
+/*
+--------------------------------------------
+--------------------------------------------
+  Theme Name: .
+  Author: .
+  Description: .
+  Version: 1.0.0
+--------------------------------------------
+--------------------------------------------
+*/
+
+/*
+-------------------------------------
+-------------------------------------
+Table of Contents
+-----------------
+01.
+02.
+03.
+04.
+-------------------------------------
+-------------------------------------
+*/
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Open-Sans-400';
+	font-size: 16px;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+/* 
+==================================
+Bacic Setup
+==================================
+*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+	background: var(--primary-color);
+	color: #afb3d6;
+}
+
+::selection {
+	background: var(--primary-color);
+	color: #afb3d6;
+}
+
+::-webkit-scrollbar {
+	width: .6rem;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--secondary-color);
+	height: 6rem;
+}
+
+section {
+	overflow-x: hidden;
+}
+
+a,
+span,
+label {
+	display: inline-block;
+}
+
+ul li {
+	list-style: none
+}
+
+a,
+a:focus {
+	text-decoration: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+button,
+input,
+textarea {
+	outline: 0;
+	border: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+hr {
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	opacity: 1;
+	background-color: transparent;
+}
+
+/* 
+=====================================
+Variables
+=====================================
+*/
+:root {
+	--size-xl: 250px;
+	--size-lg: 70px;
+	--size-md: 16px;
+	--size-sm: 14px;
+	--primary-color: #121121;
+	--secondary-color: #ec6e39;
+	--white-color: #FFFFFF;
+	--amethyst-color: #686893;
+	--bg-color: #f9f9f9;
+}
+
+/* 
+=====================================
+Variables
+=====================================
+*/
+
+
+/* 
+================================================
+================================================
+Start Reuseble Components
+================================================
+*/
+.upadte-row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.upadte-row>* {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.section-title {
+	position: relative;
+}
+
+.top-small-title {
+	font-family: 'Poppins-700';
+	color: var(--secondary-color);
+	text-transform: uppercase;
+}
+
+.title-bg {
+	position: relative;
+	font-family: 'Merriweather';
+	text-transform: capitalize;
+	font-size: var(--size-xl);
+	position: absolute;
+	top: 28%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #00000011;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+.title-bg::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#FFFFFF));
+	background: -o-linear-gradient(transparent, #FFFFFF);
+	background: linear-gradient(transparent, #FFFFFF);
+	z-index: 9;
+}
+
+.title-bg-f9::after {
+	background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#F9F9F9));
+	background: -o-linear-gradient(transparent, #F9F9F9);
+	background: linear-gradient(transparent, #F9F9F9);
+}
+
+.title {
+	font-size: var(--size-lg);
+}
+
+.top-small-title,
+.title {
+	position: relative;
+	z-index: 99;
+}
+
+.title,
+.small-title {
+	font-family: 'Poppins-600';
+	color: var(--primary-color);
+}
+
+.paragraph {
+	font-family: 'Open-Sans-400';
+	color: var(--amethyst-color);
+}
+
+.top-small-title,
+.paragraph {
+	font-size: var(--size-md);
+}
+
+.link-btn {
+	font-family: 'Open-Sans-700';
+	font-size: var(--size-sm);
+	border: 1px solid #bec1d4;
+	letter-spacing: 1px;
+	padding: 17px 48px;
+	text-transform: uppercase;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+}
+
+.link-btn:hover {
+	border-color: transparent;
+	background-color: var(--secondary-color);
+	color: var(--white-color) !important;
+}
+
+.transition-linear {
+	-webkit-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+a,
+.link-btn,
+.transition-ease-in-out {
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+/* 
+================================================
+End Reuseble Components
+================================================
+================================================
+*/
+
+
+/* 
+=========================================
+Start Header Section
+=========================================
+*/
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+header .header-top-content .social-link li a {
+	font-size: var(--size-md);
+	color: #899399;
+}
+
+header .header-top-content .signin-signup li :is(span, a) {
+	font-family: 'Open-Sans-800';
+	font-size: var(--size-sm);
+	color: #8a949a;
+}
+
+/*
+------------------
+NavBar 
+------------------
+*/
+nav .main-menu ul li:not(:last-child) a {
+	font-family: 'Open-Sans-800';
+	font-size: var(--size-sm);
+	color: var(--primary-color);
+}
+
+nav .main-menu ul li:last-of-type a {
+	color: var(--white-color);
+	background-color: var(--secondary-color);
+	padding: 16px 38px;
+}
+
+/*
+--------------------
+NavBar Toggle BTN
+--------------------
+*/
+.navbar-toggle-btn {
+	position: relative;
+	cursor: pointer;
+	z-index: 99999;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 4px;
+	background: var(--primary-color);
+	margin: 7px 0;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	-ms-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-10px, -7px);
+	-ms-transform: rotate(45deg) translate(-10px, -7px);
+	transform: rotate(45deg) translate(-10px, -7px);
+}
+
+/*
+----------------
+Sticky Menu
+----------------
+*/
+.sticky-menu {
+	background-color: var(--white-color);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	-webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.sticky-menu .nav-container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+
+	.sticky-menu .nav-container>* {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+/* 
+=========================================
+End Header Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start Hero Section
+=========================================
+*/
+.hero-section {
+	background: url(../images/hero/banner.jpg) no-repeat center / cover;
+	background-color: rgba(255, 255, 255, 0.9);
+	background-blend-mode: overlay;
+	padding: 200px 0 0;
+	overflow: hidden;
+}
+
+.hero-text p {
+	font-family: 'Open-Sans-600';
+	font-size: 18px;
+	color: var(--secondary-color);
+}
+
+.hero-text h1 {
+	font-size: 76px;
+}
+
+.hero-btn a:first-child {
+	background-color: var(--secondary-color);
+	color: var(--white-color);
+}
+
+.hero-btn a:last-child {
+	color: var(--primary-color);
+}
+
+.hero-img img {
+	margin-left: 108px;
+	margin-bottom: -2px;
+}
+
+/* 
+=========================================
+End Hero Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start About Section
+=========================================
+*/
+.about-img img {
+	margin-left: -34px;
+}
+
+.about-text h3 {
+	font-size: 50px;
+}
+
+.about-text p {
+	color: #899399;
+}
+
+.about-text .about-link a {
+	font-family: 'Open-Sans-700';
+	font-size: var(--size-md);
+	color: var(--secondary-color);
+}
+
+.about-text .about-link a:last-child {
+	color: #899399;
+}
+
+.about-text .about-link a:last-child:hover {
+	color: var(--secondary-color);
+}
+
+/* 
+=========================================
+End About Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start Events Section
+=========================================
+*/
+.events-section {
+	background-color: var(--bg-color);
+}
+
+.events-row {
+	-webkit-box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+	        box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+.events-date {
+	width: 160px;
+	height: 160px;
+	background-color: var(--secondary-color);
+}
+
+.events-date h3 {
+	font-family: 'Open-Sans-700';
+	font-size: 60px;
+}
+
+.events-date p {
+	font-family: 'Open-Sans-700';
+	font-size: var(--size-sm);
+}
+
+.events-main-text h3 {
+	font-size: 36px;
+}
+
+.events-main-text p:first-child {
+	color: #8d8db4;
+}
+
+.events-main-text p:last-child {
+	color: var(--amethyst-color);
+}
+
+.events-btn,
+.events-btn a {
+	min-width: 200px;
+	color: #bec1d4;
+}
+
+/* 
+=========================================
+End Events Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start Sermons Section
+=========================================
+*/
+.sermons-box {
+	-webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.sermons-icons {
+	position: absolute;
+	top: -27px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	max-width: 257px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.sermons-icons li i {
+	font-size: var(--size-sm);
+	color: #dad9ec;
+}
+
+.sermons-text h3 {
+	font-size: 22px;
+}
+
+.sermons-text p {
+	font-size: var(--size-sm);
+}
+
+.sermons-text h4 {
+	font-size: 18px;
+}
+
+/* 
+=========================================
+End Sermons Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start Contact Section
+=========================================
+*/
+.contact-section {
+	background: url(../images/contact/contact-bg.jpg) no-repeat top / cover;
+	background-color: rgba(18, 17, 33, 0.9);
+	background-blend-mode: overlay;
+}
+
+.form-col:not(:last-child) {
+	margin-bottom: 32px;
+}
+
+.form-field label {
+	font-family: 'Open-Sans-700';
+	font-size: var(--size-sm);
+	word-spacing: 5px;
+	letter-spacing: 1px;
+	margin-bottom: 14px;
+}
+
+.form-field label span {
+	color: var(--secondary-color);
+}
+
+.form-field :is(input, select) {
+	background-color: transparent;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-field :is(input, select, input::-webkit-input-placeholder) {
+	font-family: 'Open-Sans-400';
+	font-size: var(--size-sm);
+	color: var(--white-color);
+}
+
+.form-field :is(input, select, input::-moz-placeholder) {
+	font-family: 'Open-Sans-400';
+	font-size: var(--size-sm);
+	color: var(--white-color);
+}
+
+.form-field :is(input, select, input:-ms-input-placeholder) {
+	font-family: 'Open-Sans-400';
+	font-size: var(--size-sm);
+	color: var(--white-color);
+}
+
+.form-field :is(input, select, input::-ms-input-placeholder) {
+	font-family: 'Open-Sans-400';
+	font-size: var(--size-sm);
+	color: var(--white-color);
+}
+
+.form-field :is(input, select, input::placeholder) {
+	font-family: 'Open-Sans-400';
+	font-size: var(--size-sm);
+	color: var(--white-color);
+}
+
+.form-field :is(select, input::-webkit-input-placeholder) {
+	color: #86859b;
+}
+
+.form-field :is(select, input::-moz-placeholder) {
+	color: #86859b;
+}
+
+.form-field :is(select, input:-ms-input-placeholder) {
+	color: #86859b;
+}
+
+.form-field :is(select, input::-ms-input-placeholder) {
+	color: #86859b;
+}
+
+.form-field :is(select, input::placeholder) {
+	color: #86859b;
+}
+
+.select-item-form {
+	cursor: pointer;
+	border: 0;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 35px center;
+	background-size: 1.6rem 1.2rem;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.select-item-form:focus {
+	outline: 0;
+}
+
+.select-item-form[multiple],
+.select-item-form[size]:not([size="1"]) {
+	padding-right: 0.75rem;
+	background-image: none;
+}
+
+.select-item-form:-moz-focusring {
+	color: transparent;
+}
+
+.country-select {
+	background-position: right 136px center;
+}
+
+.state-select {
+	background-position: right 154px center;
+}
+
+.form-btn input {
+	min-width: 288px;
+	background-color: var(--secondary-color);
+	border: 0;
+}
+
+/* 
+=========================================
+End Contact Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start Features Section
+=========================================
+*/
+.features .features-text h3 {
+	font-size: 24px;
+}
+
+.features .features-text a {
+	font-family: 'Open-Sans-700';
+	color: #7f7d9f;
+}
+
+.features .features-text a:hover {
+	color: var(--secondary-color);
+}
+
+/* 
+=========================================
+End Features Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start Counter Section
+=========================================
+*/
+.counter-section {
+	background-color: var(--primary-color);
+	overflow-y: hidden;
+}
+
+.counter .counter-text p {
+	font-family: 'Open-Sans-700';
+	color: #67658d;
+}
+
+.counter .counter-text h2 span {
+	font-family: 'Poppins-600';
+	font-size: 30px;
+	color: var(--secondary-color);
+}
+
+.vertical-line::after {
+	content: "";
+	position: absolute;
+	top: -105px;
+	right: 0;
+	width: 2px;
+	height: 388px;
+	background-color: #232239;
+}
+
+/* 
+=========================================
+End Counter Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start Slider Section
+=========================================
+*/
+.slider-area {
+	overflow: hidden;
+	position: relative;
+}
+
+.slider-content {
+	max-width: 788px;
+	padding-top: 155px;
+	background: url(../images/slider/quote.png) no-repeat top / 378px;
+}
+
+.slider-content img {
+	position: absolute;
+	top: 62px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.slider-content p {
+	font-size: 26px;
+	color: #9b99b6;
+}
+
+.slider-content h3 {
+	margin-top: 160px !important;
+}
+
+.slider-content h5 {
+	font-size: var(--size-sm);
+}
+
+.swiper-pagination-button {
+	width: auto !important;
+	position: absolute;
+	top: 50%;
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	-webkit-transform: translateX(-50%) !important;
+	-moz-transform: translateX(-50%) !important;
+	-ms-transform: translateX(-50%) !important;
+	-o-transform: translateX(-50%) !important;
+	z-index: 999;
+}
+
+.swiper-pagination-button>* {
+	width: 95px;
+	height: 95px;
+	background: no-repeat center / cover;
+	margin: 0 0 !important;
+}
+
+.swiper-pagination-button>*:nth-child(1) {
+	background-image: url(../images/slider/slider-1.png);
+}
+
+.swiper-pagination-button>*:nth-child(2) {
+	background-image: url(../images/slider/slider-2.png);
+}
+
+.swiper-pagination-button>*:nth-child(3) {
+	background-image: url(../images/slider/slider-3.png);
+}
+
+.swiper-pagination-bullet-active {
+	width: 110px;
+	height: 110px;
+}
+
+/* 
+=========================================
+End Slider Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start News Section
+=========================================
+*/
+.news-section {
+	background-color: var(--bg-color);
+}
+
+.news-text h5 {
+	font-size: var(--size-sm);
+	letter-spacing: 2px;
+}
+
+.news-text h4 {
+	font-size: 19px;
+}
+
+.news-text a {
+	font-size: var(--size-sm);
+	color: var(--secondary-color);
+}
+
+/* 
+=========================================
+End News Section
+=========================================
+*/
+
+
+/* 
+=========================================
+Start Footer Section
+=========================================
+*/
+
+footer {
+	background: url(../images/footer.jpg) no-repeat top / cover;
+}
+
+.footer-about h3 {
+	font-size: 30px;
+}
+
+.footer-about p,
+.pages-link ul li a {
+	color: #afb3d6;
+}
+
+.pages-link ul li a:hover {
+	color: #FFFFFF;
+}
+
+.recent-sermons-text :is(span, p) {
+	font-family: 'Poppins-600';
+}
+
+.recent-sermons-text span {
+	color: var(--secondary-color);
+	font-size: 12px;
+}
+
+.recent-sermons-text p {
+	color: #d1d4eb;
+	font-size: 18px;
+}
+
+.footer-bottom-text::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #282736;
+}
+
+.footer-bottom-text p {
+	color: #8a90c2;
+}
+
+.footer-bottom-text p span {
+	font-family: 'Open-Sans-700';
+	color: var(--secondary-color);
+}
+
+/* 
+=========================================
+End Footer Section
+=========================================
+*/
+
+
+/* 
+===============================
+Back to top Btn
+===============================
+*/
+#scroll-up-btn {
+	font-size: 18px;
+	opacity: 0;
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	z-index: 99999;
+	background: var(--secondary-color);
+	color: var(--white-color);
+	width: 45px;
+	height: 45px;
+	-webkit-animation: myBtn 3.5s infinite linear;
+	animation: myBtn 3.5s infinite linear
+}
+
+#scroll-up-btn:hover {
+	-webkit-transform: translateY(-.7rem);
+	-ms-transform: translateY(-.7rem);
+	transform: translateY(-.7rem);
+}
+
+@-webkit-keyframes myBtn {
+	0% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+
+	25% {
+		bottom: 2rem;
+		right: 3rem;
+	}
+
+	50% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+
+	75% {
+		bottom: 2rem;
+		right: 3rem;
+	}
+
+	100% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+}
+
+@keyframes myBtn {
+	0% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+
+	25% {
+		bottom: 2rem;
+		right: 3rem;
+	}
+
+	50% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+
+	75% {
+		bottom: 2rem;
+		right: 3rem;
+	}
+
+	100% {
+		right: 3rem;
+		bottom: 4rem;
+	}
+}
