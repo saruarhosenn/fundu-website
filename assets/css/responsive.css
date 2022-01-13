@@ -160,6 +160,7 @@ Responsive Breakpoint
 	}
 
 	nav .main-menu ul li:not(:last-child) {
+		margin-right: 0px;
 		margin-bottom: 20px;
 	}
 
